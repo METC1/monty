@@ -15,7 +15,6 @@ size_t len = 0;
 size_t li_numb = 1;
 size_t read_line;
 stack_t *st_stack;
-FILE *open_f;
 int fd;
 
 if (ac != 2)
@@ -25,13 +24,13 @@ if (ac != 2)
 	}
 else
 	{
-	fd = open(filename, O_RDONLY);
+	fd = open(file, O_RDONLY);
 	if (fd == -1)
 		{
 		printf("Error: Can't open file");
 		exit(EXIT_FAILURE);
 		}
-	for (li_numb = 1; read_line != -1; li_numb++)
+	for (li_numb = 1; (read_line) != -1; li_numb++)
 		{
 		read_line = getline(&buffer, &len, fd);
 		tokens_line(&buffer, &tokens, li_numb);

@@ -11,7 +11,7 @@ void checknumber(char *n, unsigned int linu)
 {
 int i;
 
-for i = 0; n[i] != '\0'; i++)
+for (i = 0; n[i] != '\0'; i++)
 	{
 	if (i == 0 && n[i] == '-')
 		{

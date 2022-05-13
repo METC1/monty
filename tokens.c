@@ -37,13 +37,10 @@ void tokens_line(char **buffer, char ***tokens, ssize_t r_line)
  */
 void tokens_extract(char **buffer, char ***tokens)
 {
-char *token;
-char *delim;
+char *token = NULL;
+char *delim = " \n\t";
 int number;
 int i;
-
-*token = NULL;
-*delim = " \n\t";
 
 token = strtok(*buffer, delim);
 if (strcmp(token, "push") == 0)
