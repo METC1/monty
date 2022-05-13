@@ -13,9 +13,9 @@ char *buffer = NULL;
 char **tokens = NULL;
 size_t len = 0;
 size_t li_numb = 1;
-size_t read_line;
+int read_line;
 stack_t *st_stack;
-int fd;
+FILE *fd;
 
 if (ac != 2)
 	{
@@ -24,8 +24,8 @@ if (ac != 2)
 	}
 else
 	{
-	fd = open(file, O_RDONLY);
-	if (fd == -1)
+	fd = fopen(file, "r");
+	if (fd == NULL)
 		{
 		printf("Error: Can't open file");
 		exit(EXIT_FAILURE);
@@ -40,7 +40,7 @@ else
 			}
 		freetokens(&tokens);
 		}
-	close(fd);
+	fclose(fd);
 	if (buffer != NULL)
 		{
 		free(buffer);

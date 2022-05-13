@@ -29,14 +29,14 @@ if (strcmp((*tokens)[0], "push") == 0)
 			exit(EXIT_FAILURE);
 			}
 	}
-	op_code = choose_opcode((*tokens)[0];
+	op_code = choose_opcode((*tokens)[0]);
 	if (op_code != NULL)
 		{
 		op_code(st_stack, linu);
 		}
 	else
 		{
-		fprintf(stderr, "L%u: unknown instruction %s\n", linu(*tokens)[0]);
+		fprintf(stderr, "L%u: unknown instruction %s\n", linu, (*tokens)[0]);
 		exit(EXIT_FAILURE);
 		}
 
@@ -72,7 +72,7 @@ if (code[0] == '#')
 	}
 for (i = 0; opcodes[i].opcode != NULL; i++)
 	{
-	if (strcmp(code, opcodes[i].opcode == 0)
+	if (strcmp(code, opcodes[i].opcode) == 0)
 		{
 		return (opcodes[i].f);
 		}
