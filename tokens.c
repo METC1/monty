@@ -60,7 +60,7 @@ for (i = 0; token != NULL && i <= number - 2; i++)
 	}
 (*tokens)[i] = NULL;
 }
- /**
+/**
  * freetokens - Frees the tokens
  * @tokens: tokens to be freed
  * Return: nothing
@@ -75,7 +75,7 @@ if (*tokens != NULL)
 
 }
 
- /**
+/**
  * freest_stack - frees the stack
  * @st_stack: stack to be freed
  * Return: nothing
