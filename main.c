@@ -27,7 +27,7 @@ else
 	fd = fopen(file, "r");
 	if (fd == NULL)
 		{
-		fprintf(stderr, "Error: Can't open file\n");
+		fprintf(stderr, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 		}
 	for (li_numb = 1; (read_line) != -1; li_numb++)
