@@ -30,9 +30,9 @@ else
 		fprintf(stderr, "Error: Can't open file %s\n", file);
 		exit(EXIT_FAILURE);
 		}
-	for (li_numb = 1; (read_line) != -1; li_numb++)
+	for (li_numb = 1; (read_line = getline(&buffer, &len, fd)) != -1; li_numb++)
 		{
-		read_line = getline(&buffer, &len, fd);
+		/*read_line = getline(&buffer, &len, fd);*/
 		tokens_line(&buffer, &tokens, li_numb);
 		if (tokens != NULL)
 			{
