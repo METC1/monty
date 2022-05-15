@@ -14,7 +14,7 @@ char **tokens = NULL;
 size_t len = 0;
 size_t li_numb = 1;
 int read_line;
-stack_t *st_stack;
+stack_t *st_stack = NULL;
 FILE *fd;
 
 if (ac != 2)
